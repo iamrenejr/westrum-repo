@@ -61,9 +61,9 @@ const Results = () => {
           these are and raise them.
         </p>
         <p>
-          You can take this survey as many times as you feel you need, and you will get a new result each time. This
-          might help you gain more intuition of how your answers to the questions influence your final score and what it
-          means for organizational culture.
+          You can take this survey as many times as you feel you need, changing your answers experimentally, and you
+          will get a new result each time. This might help you gain more intuition of how your answers to the questions
+          influence your final score and what it means for organizational culture.
         </p>
         <p className="other-notes">Other Notes</p>
         <p>
