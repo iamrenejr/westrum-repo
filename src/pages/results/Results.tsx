@@ -71,8 +71,10 @@ const Results = () => {
           <b>How to Use</b>
         </p>
         <p>
-          At the moment, accuracy is more valuable than high scores. The Outlier column shows if your refined score is
-          too different from the "normal" response, and the Remark column shows if the result is too low or too high.
+          The refined and unrefined scores show the measurement of organizational culture as perceived by you. While we
+          ultimately want this to be as high as it can go, it's also important that we capture this value accurately.
+          The Outlier column shows if your refined score is too different from the "normal" response, and the Remark
+          column shows if the result is too low or too high.
         </p>
         <p>
           You might want to reflect on this and see if it feels accurate for you. A low score may indicate that there
