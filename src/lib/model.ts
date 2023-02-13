@@ -7,7 +7,7 @@ export const surveyModel = {
     {
       type: 'matrix',
       name: 'QS',
-      title: 'Westrum Survey',
+      title: 'Westrum Calculator',
       columns: [
         toFormat(1, 'Strongly disagree'),
         toFormat(2, 'Disagree'),
