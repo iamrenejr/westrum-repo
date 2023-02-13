@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/westrum-repo/static/css/main.cb5ae53e.css",
-    "main.js": "/westrum-repo/static/js/main.8fd9ab85.js",
+    "main.js": "/westrum-repo/static/js/main.352c8bfd.js",
     "static/js/787.28cb0dcd.chunk.js": "/westrum-repo/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/westrum-repo/index.html",
     "main.cb5ae53e.css.map": "/westrum-repo/static/css/main.cb5ae53e.css.map",
-    "main.8fd9ab85.js.map": "/westrum-repo/static/js/main.8fd9ab85.js.map",
+    "main.352c8bfd.js.map": "/westrum-repo/static/js/main.352c8bfd.js.map",
     "787.28cb0dcd.chunk.js.map": "/westrum-repo/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb5ae53e.css",
-    "static/js/main.8fd9ab85.js"
+    "static/js/main.352c8bfd.js"
   ]
 }
