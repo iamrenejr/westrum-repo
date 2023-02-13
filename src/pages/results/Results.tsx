@@ -19,17 +19,42 @@ const Results = () => {
   const refined = values.map(wghtsum).reduce(sum, 0);
   const refinedUnstdized = mean_all + refined * sd_all;
 
+  const mad = 0.4327686;
+  const median = 0.2091938;
+  const deviation = Math.abs(median - refined);
+  const threshold = 1.4826 * mad;
+  const isOutlier = deviation > threshold;
+  const tooLow = refined < median;
+  const tooHigh = refined > median;
+  const remark = tooLow ? 'Low' : tooHigh ? 'High' : 'Unknown case';
+
   return (
     <div className="results-page">
       <table>
+        <thead>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+              <b>Outlier</b>
+            </td>
+            <td>
+              <b>Remark</b>
+            </td>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td>Unrefined</td>
-            <td>{unrefined.toFixed(4)} ± 0.3881</td>
+            <td>{unrefined.toFixed(4)}</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
           </tr>
           <tr>
             <td>Refined</td>
-            <td>{refinedUnstdized.toFixed(4)} ± 0.4483</td>
+            <td>{refinedUnstdized.toFixed(4)}</td>
+            <td>{isOutlier ? `Y` : 'N'}</td>
+            <td>{isOutlier ? `${remark}` : '-'}</td>
           </tr>
         </tbody>
       </table>
@@ -46,24 +71,23 @@ const Results = () => {
           <b>How to Use</b>
         </p>
         <p>
-          Generally, higher scores mean a stronger culture of collaboration. As a rule of thumb, a value of 5 or above
-          can be considered good.
+          At the moment, accuracy is more valuable than high scores. The Outlier column shows if your refined score is
+          too different from the "normal" response, and the Remark column shows if the result is too low or too high.
         </p>
         <p>
-          Your result comes with an error term (the number after the ± sign), which shows the range your "true" result
-          is likely to be in. For example, a score of 5±1 means that it is likely to be at least 4, and at most 6. For
-          simplification purposes, this error term is fixed at 0.3881 for the unrefined method, and 0.4483 for the
-          refined method.
+          You might want to reflect on this and see if it feels accurate for you. A low score may indicate that there
+          are unseen cultural issues only you can perceive, and it may be a good idea to think about what these are and
+          raise them. Conversely, a high score may indicate that an information blindspot exists for you, and it may be
+          worth finding and addressing them.
         </p>
         <p>
-          You might want to reflect on this and see if it feels accurate for you. A low score might indicate that there
-          are cultural issues you perceive that are going unresolved, and it may be a good idea to think about what
-          these are and raise them.
+          It's important to note that these are not the only causes of outliers. Ultimately, a conversation between you
+          and others may be the best way to find causes on an individual level.
         </p>
         <p>
-          You can take this survey as many times as you feel you need, changing your answers experimentally, and you
-          will get a new result each time. This might help you gain more intuition of how your answers to the questions
-          influence your final score and what it means for organizational culture.
+          You can take this survey as many times as you feel you need. If you change your answers experimentally, you
+          will get a new result each time. This might help you gain more intuition of how your answers influence your
+          final score and what it means for organizational culture.
         </p>
         <p className="other-notes">Other Notes</p>
         <p>
