@@ -82,7 +82,7 @@ const Results = () => {
         </p>
         <p>
           It's important to note that these are not the only causes of outliers. Ultimately, a conversation between you
-          and others may be the best way to find causes on an individual level.
+          and others may be the best way to find these causes on an individual level.
         </p>
         <p>
           You can take this survey as many times as you feel you need. If you change your answers experimentally, you
